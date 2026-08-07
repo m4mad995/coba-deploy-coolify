@@ -7,6 +7,6 @@ Route::get('/', fn () => redirect()->route('todos.index'));
 
 Route::resource('todos', TodoController::class)->only(['index', 'store', 'update', 'destroy']);
 
-Route::get('/test-sentry', function () {
-    throw new Exception('Hore! Sentry berhasil menangkap error dari Coolify!');
+Route::get('/debug-glitchtip', function () {
+    throw new Exception('Test GlitchTip error!');
 });
